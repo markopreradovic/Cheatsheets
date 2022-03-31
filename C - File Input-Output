@@ -1,0 +1,29 @@
+FILE *fopen(char *imedat, char *rezim); - file open
+      osnovni režimi: “r” / “w” / “a” (read / write / append = čitanje/pisanje/dodavanje)
+      kombinovani režimi (dodati ‘+’): “r+” / “w+” / “a+” 
+      rad sa binarnim datotekama (dodati ‘b’): “rb” / “r+b” / “wb” / “w+b” / “ab” / “a+b”
+
+int fclose(FILE *dat);  - close file
+
+int fputc(int znak, FILE *dat);  - 1 char write (binary)
+
+int fputs(char *string, FILE *dat);  - nonformatted string write
+
+int fprintf(FILE *dat, char *format, ...);  - formatted write
+
+int fgetc(FILE *dat); - 1 char read
+
+char *fgets(char *string, int n, FILE *dat);  - nonformatted string read
+
+int fscanf(FILE *dat, char *format, ...);  -  formatted read 
+
+int fputc(int znak, FILE *dat);  - 1 char write (binary)
+	
+int fgetc(FILE *dat);  - 1 char read (binary)
+
+int fwrite(void *niz, int size, int count, FILE *dat);  - block write (binary)
+
+int fread(void *niz, int size, int count, FILE *dat);  - block read (binary)
+
+int fseek(FILE *dat, long pomjeraj, int reper);  - direct positioning
+
